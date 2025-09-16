@@ -83,6 +83,8 @@ header {
   border-radius: 10px;
 }
 
+
+
 main {
 
     max-width: 100ch;
@@ -133,6 +135,29 @@ main {
 
 .skill-card h3 {
   color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 2rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
   margin-bottom: 0.5rem;
 }
 
