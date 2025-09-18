@@ -123,17 +123,33 @@ main {
     padding: 5%;
 }
 
-/* Main container for all sections */
-.container {
+/* Mobile styles (default) */
+main {
+  padding: 2rem 1rem;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+
+
+/* Apply to your main container that holds all sections */
+main {
+  display: grid;
+  gap: 4rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 /* Responsive container padding */
 @media (min-width: 768px) {
-  .container {
-    padding: 0 2rem;
+  main {
+    padding: 1.5rem;
   }
 }
 
@@ -162,17 +178,23 @@ section h2::after {
 }
 
 .about-section {
-  display:flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   padding: 3rem 0;
   align-items: center;
 }
 
+/* On larger screens, create a 2-column layout */
+@media (min-width: 768px) {
+  .about-section {
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+  }
+}
+
 .about-image {
-  flex: 1;
-  min-width: 250px;
-  text-align: center;
+  justify-self: center;
 }
 
 .about-image img {
@@ -188,18 +210,18 @@ section h2::after {
 }
 
 .skills-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .skill-card {
-  flex: 1;
-  min-width: 200px;
   padding: 1.5rem;
   background: #f8f9fa;
   border-radius: 8px;
   text-align: center;
+  border: 1px solid #e9ecef;
 }
 
 .skill-card h3 {
@@ -208,9 +230,17 @@ section h2::after {
 }
 
 .projects-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* On tablets and up, show 2 columns */
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .project-card {
@@ -219,6 +249,12 @@ section h2::after {
   border: 1px solid #e9ecef;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .project-card h3 {
