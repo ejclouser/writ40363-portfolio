@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+ --primary-color: #1e40af;
+ --heading-color: #2c3e50;
+ --text-color: #1f2937;
+ --light-text: #6b7280;
+ --background: #efcea9;
+ --light-background: #f9fafb;
+ --card-background: #f8f9fa;
+ --card-border: #e9ecef;
+ --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ --card-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+ --accent-color: #efcea9;
+ --link-hover: #007bff;
+}
+
+
+
+* {
+  border: 0px solid red;
+    }
+
+body {
+
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+
+    color: var(--text-color);
+    background-color: var(--background);
+}
+
+h1,h2,h3 {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+nav {
+
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+nav a {
+  color: #495057;
+  text-decoration: none;
+  margin-right: 2rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* Basic focus state for accessibility */
+nav a:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgb(217, 217, 217);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2c3e50;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #224dd1;
+}
+
+
+header {
+/* 
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    height: 70vh;
+    background-color: bisque; */
+
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    height: 60vh;
+    background-color: #ffffff
+
+}
+
+.header_text {
+
+    background-color:rgb(217, 217, 217);
+    height: 50vh;
+    width: 45%;
+}
+
+
+.header_pic {
+    background-color:rgb(217, 217, 217);
+    flex: 1;
+    min-height: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d
+
+}
+
+.header_pic img {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+main {
+
+    max-width: 100ch;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+/* Mobile styles (default) */
+main {
+  padding: 2rem 1rem;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+
+
+/* Apply to your main container that holds all sections */
+main {
+  display: grid;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Responsive container padding */
+@media (min-width: 768px) {
+  main {
+    padding: 1.5rem;
+  }
+}
+
+/* Consistent section spacing */
+section {
+  padding: 3rem 0;
+}
+
+/* Section headings */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+/* Add some visual interest to section headings */
+section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #28a745;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+  align-items: center;
+}
+
+/* On larger screens, create a 2-column layout */
+@media (min-width: 768px) {
+  .about-section {
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+  }
+}
+
+.about-image {
+  justify-self: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 250px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.skill-card h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* On tablets and up, show 2 columns */
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.project-card {
+  padding: 2rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  margin-bottom: 0.5rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+p + p {
+    margin-top: 1rem;
+}
+
+h1 {
+    color: var(--heading-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    background-color:cadetblue;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+  background-color:cadetblue;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555; /* Slightly lighter for body text */
+}
+
