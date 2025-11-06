@@ -8,7 +8,7 @@
 
 This repository contains my web development projects from WRIT 40363. The main portfolio site showcases my work and growth as a web developer.
 
-**Live Portfolio:** [https://yourusername.github.io/writ40363-portfolio-yourname/](https://yourusername.github.io/writ40363-portfolio-yourname/)
+**Live Portfolio:** [https://ejclouser.github.io/writ40363-portfolio/](https://ejclouser.github.io/writ40363-portfolio/)
 
 ## Repository Structure
 
@@ -39,8 +39,8 @@ Individual course projects are preserved in the `projects/` directory:
 
 ## Contact
 
-- **GitHub:** [ejclouser](https://github.com/yourusername)
-- **Email:** your.email@example.com
+- **GitHub:** [https://github.com/ejclouser/writ40363-portfolio](https://github.com/ejclouser/writ40363-portfolio)
+- **Email:** e.j.clouser@tcu.edu
 
 ---
 
