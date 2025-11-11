@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="dashboard">
-        <header>
+
+    <header>
             <h1>My Personal Dashboard</h1>
         </header>
+
+    <div class="dashboard">
+        
 
         <main class="widgets-container">
             <!-- Weather Widget -->
@@ -29,6 +32,31 @@
                 </div>
             <button id="new-quote-btn" class="btn-primary">New Quote</button>
             </section>
+
+            <div class="widget tasks-widget">
+  <h2>My Tasks</h2>
+
+  <!-- Add Task Form -->
+  <form id="task-form" class="task-form">
+    <input
+      type="text"
+      id="task-input"
+      placeholder="Add a new task..."
+      required
+    />
+    <button type="submit" class="btn-primary">Add Task</button>
+  </form>
+
+  <!-- Task Statistics -->
+  <div id="task-stats" class="task-stats">
+    <!-- Stats will appear here -->
+  </div>
+
+  <!-- Tasks List -->
+  <div id="tasks-list" class="tasks-list">
+    <!-- Tasks will appear here -->
+  </div>
+</div>
 
         </main>
     </div>
