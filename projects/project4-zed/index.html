@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zed - Song Creator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <div>
+                <h1>🎵 Zed</h1>
+                <p class="subtitle">Create and Store Your Own Songs</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-link active" onclick="showSection('create'); return false;">Create</a>
+            <a href="#" class="nav-link" onclick="showSection('library'); return false;">Library</a>
+            <a href="#" class="nav-link" onclick="showSection('about'); return false;">About</a>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        
+        <!-- Create Song Section -->
+        <section id="create" class="section create-section active">
+            <h2>Create Your Song</h2>
+            <div class="creator-container">
+                <div class="sound-pad">
+                    <h3>Sound Pad</h3>
+                    <div class="pads-grid">
+                        <button class="pad" data-note="C4" onclick="playSound('C4')">C</button>
+                        <button class="pad" data-note="D4" onclick="playSound('D4')">D</button>
+                        <button class="pad" data-note="E4" onclick="playSound('E4')">E</button>
+                        <button class="pad" data-note="F4" onclick="playSound('F4')">F</button>
+                        <button class="pad" data-note="G4" onclick="playSound('G4')">G</button>
+                        <button class="pad" data-note="A4" onclick="playSound('A4')">A</button>
+                        <button class="pad" data-note="B4" onclick="playSound('B4')">B</button>
+                        <button class="pad" data-note="C5" onclick="playSound('C5')">C'</button>
+                    </div>
+                </div>
+
+                <div class="song-controls">
+                    <h3>Song Controls</h3>
+                    <div class="control-group">
+                        <label for="song-name">Song Name:</label>
+                        <input type="text" id="song-name" placeholder="Enter song name">
+                    </div>
+                    <div class="control-group">
+                        <label for="tempo">Tempo (BPM):</label>
+                        <input type="number" id="tempo" min="40" max="200" value="120">
+                    </div>
+                    <div class="button-group">
+                        <button id="play-btn" class="btn btn-primary" onclick="playSong()">▶ Play</button>
+                        <button id="stop-btn" class="btn btn-secondary" onclick="stopSong()">⏹ Stop</button>
+                        <button id="clear-btn" class="btn btn-secondary" onclick="clearSong()">🗑 Clear</button>
+                    </div>
+                    <div class="button-group">
+                        <button id="save-btn" class="btn btn-success" onclick="saveSong()">💾 Save Song</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="song-timeline">
+                <h3>Timeline</h3>
+                <div id="timeline" class="timeline">
+                    <p class="placeholder">Your song will appear here...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Library Section -->
+        <section id="library" class="section library-section">
+            <h2>Your Song Library</h2>
+            <div id="songs-library" class="songs-grid">
+                <div class="empty-state">
+                    <p>No songs saved yet. Create one to get started!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <h2>About Zed</h2>
+            <div class="about-content">
+                <p>Zed is an interactive song creator that allows you to compose music using a simple sound pad interface. Create melodies, save your compositions, and build your own music library.</p>
+                <h3>How to Use:</h3>
+                <ul>
+                    <li>Click on the sound pad buttons to create your melody</li>
+                    <li>Enter a name for your song</li>
+                    <li>Adjust the tempo (BPM) to your liking</li>
+                    <li>Click "Play" to hear your creation</li>
+                    <li>Use "Clear" to start over or "Save Song" to store your work</li>
+                    <li>View all your saved songs in the Library section</li>
+                </ul>
+                <h3>Features:</h3>
+                <ul>
+                    <li>🎹 Interactive sound pad with 8 musical notes</li>
+                    <li>💾 Save and store your creations</li>
+                    <li>⏱️ Adjustable tempo control</li>
+                    <li>📚 Personal song library</li>
+                    <li>✏️ Edit and replay saved songs</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2025 Evan Clouser - Zed Music Creator</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
