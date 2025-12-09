@@ -3,24 +3,24 @@
    =================================== */
 
 :root {
-  /* Color Palette - Warm Tones */
-  --color-primary: #d97706;      /* Warm Orange */
-  --color-secondary: #ea580c;    /* Deep Orange */
-  --color-accent: #f59e0b;       /* Amber */
-  --color-light-warm: #fef3c7;   /* Light Amber */
+  /* Color Palette */
+  --color-primary: #d97706;      
+  --color-secondary: #ea580c;    
+  --color-accent: #f59e0b;       
+  --color-light-warm: #fef3c7;   
 
   /* Backgrounds */
-  --color-bg-light: #faf5f0;     /* Warm Light Beige */
+  --color-bg-light: #faf5f0;     
   --color-bg-white: #ffffff;
 
   /* Text Colors */
-  --color-text-dark: #78350f;    /* Dark Brown */
-  --color-text-muted: #92400e;   /* Muted Brown */
+  --color-text-dark: #78350f;    
+  --color-text-muted: #92400e;   
 
   /* UI Elements */
-  --color-border: #fed7aa;       /* Light Orange Border */
-  --color-success: #10b981;      /* Green for Save */
-  --color-success-bg: #ecfdf5;   /* Light Green */
+  --color-border: #fed7aa;       
+  --color-success: #10b981;      
+  --color-success-bg: #ecfdf5;   
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -529,4 +529,26 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
   }
+}
+
+/* Back Navigation Link */
+.back-nav {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: var(--color-light-warm);
+  border-top: 2px solid var(--color-accent);
+  margin-top: 2rem;
+}
+
+.back-nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  transition: all 0.3s ease;
+}
+
+.back-nav a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
 }

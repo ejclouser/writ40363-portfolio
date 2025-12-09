@@ -290,6 +290,19 @@ section h2::after {
   margin-bottom: 0.5rem;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1e40af;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #007bff;
+}
+
 section {
     margin-bottom: 2rem;
 }

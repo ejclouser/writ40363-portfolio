@@ -437,3 +437,25 @@ header h1 {
     transform: translateY(0);
   }
 }
+
+/* Back Navigation Link */
+.back-nav {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-light);
+  border-top: 2px solid var(--color-border);
+  margin-top: 2rem;
+}
+
+.back-nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  transition: all 0.3s ease;
+}
+
+.back-nav a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
